@@ -12,7 +12,29 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 2,
+
+   id: 2,
+   name: "Herbizarre",
+   pv: 35,
+   cp: 10,
+   picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png",
+   types: ["Plante", "Poison"],
+   created: new Date()
+
+ },
+ {
+   
+   id: 3,
+   name: "Florizarre",
+   pv: 55,
+   cp: 40,
+   picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png",
+   types: ["Plante", "Poison"],
+   created: new Date()
+ },
+ {
+
+  id: 4,
   name: "Salamèche",
   pv: 39,
   cp: 6,
@@ -21,7 +43,28 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 3,
+
+  id: 5,
+  name: "Reptincel",
+  pv: 55,
+  cp: 6,
+  picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png",
+  types: ["Feu"],
+  created: new Date()
+ },
+ {
+
+  id: 6,
+  name: "Dracaufeu",
+  pv: 85,
+  cp: 6,
+  picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png",
+  types: ["Feu","Vol"],
+  created: new Date()
+ },
+
+ {
+  id: 7,
   name: "Carapuce",
   pv: 44,
   cp: 4,
@@ -30,7 +73,25 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 4,
+    id: 8,
+    name: "Carabaffe",
+    pv: 64,
+    cp: 4,
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png",
+    types: ["Eau"],
+    created: new Date()
+ },
+ {
+    id: 9,
+    name: "Carabaffe",
+    pv: 84,
+    cp: 4,
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png",
+    types: ["Eau"],
+    created: new Date()
+ },
+ {
+  id: 10,
   name: "Aspicot",
   pv: 16,
   cp: 2,
@@ -39,7 +100,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 5,
+  id: 11,
   name: "Roucool",
   pv: 30,
   cp: 7,
@@ -48,7 +109,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 6,
+  id: 12,
   name: "Rattata",
   pv: 18,
   cp: 6,
@@ -57,7 +118,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 7,
+  id: 13,
   name: "Piafabec",
   pv: 14,
   cp: 5,
@@ -66,7 +127,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 8,
+  id: 14,
   name: "Abo",
   pv: 16,
   cp: 4,
@@ -75,7 +136,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 9,
+  id: 15,
   name: "Pikachu",
   pv: 21,
   cp: 7,
@@ -84,7 +145,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 10,
+  id: 16,
   name: "Sabelette",
   pv: 19,
   cp: 3,
@@ -93,7 +154,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 11,
+  id: 17,
   name: "Mélofée",
   pv: 25,
   cp: 5,
@@ -102,7 +163,7 @@ export const POKEMONS: Pokemon[] = [
   created: new Date()
  },
  {
-  id: 12,
+  id: 18,
   name: "Goupix",
   pv: 17,
   cp: 8,
