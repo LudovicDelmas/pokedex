@@ -12,7 +12,7 @@ const PokemonList: FunctionComponent = () => {
   
   return (
     <div>
-      <h1 className="center">Pokédex</h1>
+      <h1 className="center">Pokémon</h1>
       <div className="container"> 
         <div className="row"> 
         {pokemons.map(pokemon => (

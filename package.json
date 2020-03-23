@@ -1,7 +1,7 @@
 {
   "name": "react-pokemons-app",
   "version": "1.0.0",
-  "homepage": "https://LudovicDelmas.github.io/pokedex/",
+  "homepage": "https://ludovicdelmas.github.io/pokedex/",
   "description": "An awesome application to handle some pokemons.",
   "dependencies": {
     "@types/node": "12.11.1",
