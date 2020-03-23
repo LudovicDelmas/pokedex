@@ -2,9 +2,11 @@ import React, { FunctionComponent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Pokemon from '../models/pokemon';
 import formatType from '../helpers/format-type';
+import PokemonService from '../services/pokemon-service'
   
 type Props = {
   pokemon: Pokemon
+  // isEditForm : boolean
 };
 
 type Field = {
@@ -14,6 +16,7 @@ type Field = {
 }
 
 type Form = {
+  picture: Field,
   name: Field,
   pv: Field,
   cp: Field,
@@ -22,14 +25,15 @@ type Form = {
   
 const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
 
+  const history = useHistory();
+
   const [form, setForm] = useState<Form>({
+    picture: { value: pokemon.picture },
     name: { value: pokemon.name, isValid: true },
     pv: { value: pokemon.pv, isValid: true },
     cp: { value: pokemon.cp, isValid: true },
     types: { value: pokemon.types, isValid: true },
   });
-
-  const history = useHistory();
   
   const types: string[] = [
     'Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik',
@@ -70,12 +74,33 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
     const isFormValid = validateForm();
 
     if(isFormValid){
-      history.push(`/pokemons${pokemon.id}`);
+      pokemon.picture = form.picture.value;
+      pokemon.name = form.name.value;
+      pokemon.pv = form.pv.value;
+      pokemon.cp = form.cp.value;
+      pokemon.types = form.types.value;
+      // isEditForm ? updatePokemon() : addPokemon();
     }
   }
 
   const validateForm = () => {
     let newForm: Form = form;
+
+     // Validator url
+    //  if(isAddForm()) {
+
+    //   const start = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
+    //   const end = ".png";
+
+    //   if(!form.picture.value.startsWith(start) || !form.picture.value.endsWith(end)) {
+    //     const errorMsg: string = 'L\'url n\'est pas valide.';
+    //     const newField: Field = { value: form.picture.value, error: errorMsg, isValid: false };
+    //     newForm = { ...newForm, ...{ picture: newField } };
+    //   } else {
+    //     const newField: Field = { value: form.picture.value, error: '', isValid: true };
+    //     newForm = { ...newForm, ...{ picture: newField } };
+    //   }
+    // }
 
     //validator name
     if(!/^[a-zA-Zàéè ] {3,25}$/.test(form.name.value)){
@@ -122,6 +147,23 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
 
     return true;
   }
+
+  // const deletePokemon = () => {
+  //   PokemonService.deletePokemon(pokemon).then(() => history.push(`/pokemons`));
+  // }
+
+  // // const isAddForm = (): boolean => {
+  // //   return !isEditForm;
+  // // }
+
+  // const addPokemon = () => {
+  //   PokemonService.addPokemon(pokemon).then(() => history.push(`/pokemons`));
+  // }
+
+  // const updatePokemon = () => {
+  //   PokemonService.updatePokemon(pokemon).then(() => history.push(`/pokemons/${pokemon.id}`));
+  // }
+
    
   return (
     <form onSubmit={e => handleSubmit(e)}>
